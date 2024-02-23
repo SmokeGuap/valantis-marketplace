@@ -1,0 +1,40 @@
+@import '/src/styles/variables';
+
+.categories {
+  display: flex;
+  gap: 1px;
+  color: $darkGray;
+  border-radius: 5px;
+  margin-bottom: 50px;
+  overflow: auto;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    height: 0px;
+  }
+}
+
+.category {
+  white-space: pre;
+  display: flex;
+  align-items: center;
+  background-color: $beige;
+  padding: 6px 8px 6px 6px;
+}
+
+.activeCategory {
+  padding-left: 10px;
+  color: $beige;
+  background-color: $darkGray;
+
+  &::before {
+    content: '';
+    display: block;
+    position: relative;
+    left: -5px;
+    height: 5px;
+    width: 5px;
+    background-color: $beige;
+    border-radius: 100%;
+  }
+}
