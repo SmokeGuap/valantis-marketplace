@@ -78,7 +78,7 @@ const MainPage: FC = () => {
       )}
       <Pagination
         totalCount={ids.length}
-        currentPage={currentPage}
+        currentPage={currentPage === +page ? currentPage : 1}
         pageSize={50}
         setCurrentPage={setCurrentPage}
       />
