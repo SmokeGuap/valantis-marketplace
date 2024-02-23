@@ -1,0 +1,60 @@
+@import '/src/styles/variables';
+
+.pagination {
+  display: flex;
+  margin: 20px 0;
+  justify-content: center;
+}
+
+.list {
+  display: flex;
+  gap: 4px;
+}
+
+.prev,
+.next {
+  border-radius: 5px;
+  background-color: $white;
+  width: 40px;
+  height: 40px;
+}
+
+.prevActive,
+.nextActive {
+  border-radius: 5px;
+
+  background-color: $white;
+  width: 40px;
+  height: 40px;
+
+  &:hover {
+    color: $white;
+    background-color: $beige;
+  }
+}
+
+.dots {
+  border-radius: 5px;
+  width: 40px;
+  height: 40px;
+}
+.currentPageNumber {
+  border-radius: 5px;
+
+  color: $white;
+  background-color: $beige;
+  width: 40px;
+  height: 40px;
+}
+.pageNumber {
+  border-radius: 5px;
+
+  background-color: $white;
+  width: 40px;
+  height: 40px;
+
+  &:hover {
+    color: $white;
+    background-color: $beige;
+  }
+}
