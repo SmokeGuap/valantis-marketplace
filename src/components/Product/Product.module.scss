@@ -1,0 +1,23 @@
+@import '/src/styles/variables';
+
+.product {
+  padding: 20px;
+  background-color: $beige;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.name {
+  text-align: center;
+}
+
+.brand {
+  font-size: 14px;
+  color: $gray;
+  font-style: italic;
+  text-align: center;
+  flex: 1;
+}
