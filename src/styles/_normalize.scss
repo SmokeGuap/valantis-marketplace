@@ -1,0 +1,50 @@
+@import 'variables';
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  color: $darkGray;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-family: 'Inter';
+
+  &:disabled {
+    color: $gray;
+    cursor: auto;
+  }
+}
+
+input {
+  font-size: 16px;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: $beige;
+  font-family: 'Inter';
+  color: inherit;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+body {
+  color: $darkGray;
+  font: {
+    family: 'Inter', sans-serif;
+    weight: 500;
+    style: normal;
+    size: 16px;
+  }
+}
