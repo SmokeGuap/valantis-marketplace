@@ -45,25 +45,29 @@
 }
 
 @media (max-width: 1700px) {
-  .products {
+  .products,
+  .loading {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
 @media (max-width: 1250px) {
-  .products {
+  .products,
+  .loading {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (max-width: 768px) {
-  .products {
+  .products,
+  .loading {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 450px) {
-  .products {
+  .products,
+  .loading {
     grid-template-columns: repeat(1, 1fr);
   }
 }
