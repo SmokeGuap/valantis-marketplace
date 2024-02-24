@@ -1,3 +1,3 @@
-const BASE_URI = 'http://api.valantis.store:40000/';
+const BASE_URI = 'https://api.valantis.store:41000/';
 
 export default BASE_URI;
