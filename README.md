@@ -1,4 +1,4 @@
-# Valntis MarketPlace
+# Valantis MarketPlace
 
 ## Used technologies
 
