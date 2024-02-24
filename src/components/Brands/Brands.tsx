@@ -1,6 +1,7 @@
 import classnames from 'classnames';
 import { FC, useEffect, useState } from 'react';
 import { useLocation, useSearchParams } from 'react-router-dom';
+import { useQuery } from '@tanstack/react-query';
 
 import { getProducts } from 'src/API/requests';
 import { useHorizontalScroll, useScrollBlock } from 'src/hooks';
@@ -28,11 +29,17 @@ const Brands: FC = () => {
     ?.split('=')[1];
   const [activeBrand, setActiveBrand] = useState(brand ? brand : '');
 
+  const { status, isFetching, data } = useQuery({
+    queryKey: ['get_brands'],
+    queryFn: () => getProducts('get_fields', { field: 'brand' }),
+    retry: 3,
+  });
+
   useEffect(() => {
-    getProducts('get_fields', { field: 'brand' }).then((data) =>
-      setBrands(data)
-    );
-  }, []);
+    if (status === 'success') {
+      setBrands(data);
+    }
+  }, [status, data]);
 
   useEffect(() => {
     if (activeBrand) {
@@ -85,6 +92,8 @@ const Brands: FC = () => {
       );
     }
   }, [activeBrand]);
+
+  if (isFetching) return <p className={styles.loading}>Загрузка брендов...</p>;
 
   if (!brands) return;
 

@@ -32,7 +32,16 @@ const Products: FC<IProductsProps> = (props) => {
     }
   }, [status, data]);
 
-  if (isFetching) return <p>Загрузка...</p>;
+  if (isFetching)
+    return (
+      <div className={styles.loading}>
+        {Array(15)
+          .fill(0)
+          .map(() => (
+            <div></div>
+          ))}
+      </div>
+    );
 
   if (!products) return <p>Украшения не найдены</p>;
 
